@@ -57,6 +57,12 @@ service:
     port: 8010
     targetPort: 8010
 
+  infra: 
+    name: infra
+    type: NodePort
+    port: 8011
+    targetPort: 8011
+
 
 deployment:
   defaultImagePullPolicy: IfNotPresent
@@ -85,6 +91,10 @@ deployment:
   systementry: 
     name: systementry
     image: geppettotest/inframanager-systementry:1.0
+
+  infra: 
+    name: infra
+    image: geppettotest/inframanager-infra:1.0
 
   camundapod:
      name: camundapod

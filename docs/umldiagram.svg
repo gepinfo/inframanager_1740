@@ -1,81 +1,162 @@
-<svg version="1.1" baseProfile="full" width="334.0" height="816.0" viewbox="0 0 334 816" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<svg version="1.1" baseProfile="full" width="1143.0" height="456.0" viewbox="0 0 1143 456" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 <desc >#.interface: fill=lightblue
 #.enumeration: fill=lightgreen
 #.type: fill=lightgray
-[&lt;interface&gt;User|+created_date: { type: Date; };+created_by: { type: String; };+last_modified_by: { type: String; };+last_modified_date: { type: Date; };+firstname: { type: String; };+lastname: { type: String; };+username: { type: String; };+email: { type: String; };+password: { type: String; };+signintype: { type: String; };+fbId: { type: String; };+githubId: { type: String; };+phonenumber: { type: String; };+avatar: { type: String; };+Idtoken: { type: String; };+loggedinDate: { type: Date; };+loggedoutDate: { type: Date; };+role: { type: String; ref: &quot;roles&quot;; };+org: { type: String; };+org_country: { type: String; };+org_sub1: { type: String; };+org_sub2: { type: String; };+org_sub3: { type: String; }|]</desc>
+[&lt;interface&gt;infra|+created_date: { type: Date; };+created_by: { type: String; };+last_modified_by: { type: String; };+last_modified_date: { type: Date; };+providertype: { type: Providertype; };+istemplate: { type: Boolean; };+provider: { type: Provider; };+projectid: { type: String; };+iacframeworks: { type: Iacframeworks; };+iacversions: { type: String; };+components: { type: ObjectId; ref: &quot;infracomponent&quot;; }|]
+[&lt;enumeration&gt;Providertype|LOCAL;CLOUD]
+[&lt;enumeration&gt;Provider|AZURE;GCP;AWS;IBM]
+[&lt;enumeration&gt;Iacframeworks|TF;GITACTIONS]
+[&lt;interface&gt;infracomponent|+created_date: { type: Date; };+created_by: { type: String; };+last_modified_by: { type: String; };+last_modified_date: { type: Date; };+provider: { type: Provider; };+name: { type: String; };+scriptid: { type: String; };+scriptlocation: { type: String; };+imagename: { type: String; }|]
+[&lt;enumeration&gt;Provider|AWS;GCP;AZURE;IBM]</desc>
 <g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
 <g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 <g stroke="transparent" fill="transparent">
-<rect x="0.0" y="0.0" height="816.0" width="334.0" stroke="none"></rect>
+<rect x="0.0" y="0.0" height="456.0" width="1143.0" stroke="none"></rect>
 </g>
 <g transform="translate(8, 8)" fill="#33322E">
 <g transform="translate(20, 20)">
-<g data-name="User">
-<g fill="lightblue" stroke="#33322E" data-name="User">
-<rect x="0.0" y="0.0" height="760.0" width="278.0" data-name="User"></rect>
-<path d="M0.0 31.0 L278.0 31.0" fill="none" data-name="User"></path>
-<path d="M0.0 752.0 L278.0 752.0" fill="none" data-name="User"></path>
+<g data-name="infra">
+<g fill="lightblue" stroke="#33322E" data-name="infra">
+<rect x="0.0" y="0.0" height="400.0" width="320.0" data-name="infra"></rect>
+<path d="M0.0 31.0 L320.0 31.0" fill="none" data-name="infra"></path>
+<path d="M0.0 392.0 L320.0 392.0" fill="none" data-name="infra"></path>
 </g>
-<g transform="translate(0, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="User">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="User">
-<a id="../application/services/diagrams/serviceModels/User.ts.User" xlink:href="../application/services/diagrams/serviceModels/User.ts"><text x="131.0" y="13.5" stroke="none" text-anchor="middle" data-name="User">User</text></a>
+<g transform="translate(0, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="infra">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="infra">
+<a id="../application/services/diagrams/serviceModels/infra.ts.infra" xlink:href="../application/services/diagrams/serviceModels/infra.ts"><text x="152.0" y="13.5" stroke="none" text-anchor="middle" data-name="infra">infra</text></a>
 
 </g>
 </g>
-<g transform="translate(0, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="User">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="User">
-<text x="0.0" y="13.5" stroke="none" data-name="User">+created_date: { type: Date</text>
-<text x="0.0" y="28.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="43.5" stroke="none" data-name="User">+created_by: { type: String</text>
-<text x="0.0" y="58.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="73.5" stroke="none" data-name="User">+last_modified_by: { type: String</text>
-<text x="0.0" y="88.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="103.5" stroke="none" data-name="User">+last_modified_date: { type: Date</text>
-<text x="0.0" y="118.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="133.5" stroke="none" data-name="User">+firstname: { type: String</text>
-<text x="0.0" y="148.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="163.5" stroke="none" data-name="User">+lastname: { type: String</text>
-<text x="0.0" y="178.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="193.5" stroke="none" data-name="User">+username: { type: String</text>
-<text x="0.0" y="208.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="223.5" stroke="none" data-name="User">+email: { type: String</text>
-<text x="0.0" y="238.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="253.5" stroke="none" data-name="User">+password: { type: String</text>
-<text x="0.0" y="268.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="283.5" stroke="none" data-name="User">+signintype: { type: String</text>
-<text x="0.0" y="298.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="313.5" stroke="none" data-name="User">+fbId: { type: String</text>
-<text x="0.0" y="328.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="343.5" stroke="none" data-name="User">+githubId: { type: String</text>
-<text x="0.0" y="358.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="373.5" stroke="none" data-name="User">+phonenumber: { type: String</text>
-<text x="0.0" y="388.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="403.5" stroke="none" data-name="User">+avatar: { type: String</text>
-<text x="0.0" y="418.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="433.5" stroke="none" data-name="User">+Idtoken: { type: String</text>
-<text x="0.0" y="448.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="463.5" stroke="none" data-name="User">+loggedinDate: { type: Date</text>
-<text x="0.0" y="478.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="493.5" stroke="none" data-name="User">+loggedoutDate: { type: Date</text>
-<text x="0.0" y="508.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="523.5" stroke="none" data-name="User">+role: { type: String</text>
-<text x="0.0" y="538.5" stroke="none" data-name="User">ref: &quot;roles&quot;</text>
-<text x="0.0" y="553.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="568.5" stroke="none" data-name="User">+org: { type: String</text>
-<text x="0.0" y="583.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="598.5" stroke="none" data-name="User">+org_country: { type: String</text>
-<text x="0.0" y="613.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="628.5" stroke="none" data-name="User">+org_sub1: { type: String</text>
-<text x="0.0" y="643.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="658.5" stroke="none" data-name="User">+org_sub2: { type: String</text>
-<text x="0.0" y="673.5" stroke="none" data-name="User">}</text>
-<text x="0.0" y="688.5" stroke="none" data-name="User">+org_sub3: { type: String</text>
-<text x="0.0" y="703.5" stroke="none" data-name="User">}</text>
+<g transform="translate(0, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="infra">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="infra">
+<text x="0.0" y="13.5" stroke="none" data-name="infra">+created_date: { type: Date</text>
+<text x="0.0" y="28.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="43.5" stroke="none" data-name="infra">+created_by: { type: String</text>
+<text x="0.0" y="58.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="73.5" stroke="none" data-name="infra">+last_modified_by: { type: String</text>
+<text x="0.0" y="88.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="103.5" stroke="none" data-name="infra">+last_modified_date: { type: Date</text>
+<text x="0.0" y="118.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="133.5" stroke="none" data-name="infra">+providertype: { type: Providertype</text>
+<text x="0.0" y="148.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="163.5" stroke="none" data-name="infra">+istemplate: { type: Boolean</text>
+<text x="0.0" y="178.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="193.5" stroke="none" data-name="infra">+provider: { type: Provider</text>
+<text x="0.0" y="208.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="223.5" stroke="none" data-name="infra">+projectid: { type: String</text>
+<text x="0.0" y="238.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="253.5" stroke="none" data-name="infra">+iacframeworks: { type: Iacframeworks</text>
+<text x="0.0" y="268.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="283.5" stroke="none" data-name="infra">+iacversions: { type: String</text>
+<text x="0.0" y="298.5" stroke="none" data-name="infra">}</text>
+<text x="0.0" y="313.5" stroke="none" data-name="infra">+components: { type: ObjectId</text>
+<text x="0.0" y="328.5" stroke="none" data-name="infra">ref: &quot;infracomponent&quot;</text>
+<text x="0.0" y="343.5" stroke="none" data-name="infra">}</text>
 
 </g>
 </g>
-<g transform="translate(0, 752)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="User">
-<g transform="translate(8, 8)" fill="#33322E" data-name="User">
+<g transform="translate(0, 392)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="infra">
+<g transform="translate(8, 8)" fill="#33322E" data-name="infra">
+
+</g>
+</g>
+</g>
+<g data-name="Providertype">
+<g fill="lightgreen" stroke="#33322E" data-name="Providertype">
+<rect x="360.0" y="161.5" height="77.0" width="116.0" data-name="Providertype"></rect>
+<path d="M360.0 192.5 L476.0 192.5" fill="none" data-name="Providertype"></path>
+</g>
+<g transform="translate(360, 161.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Providertype">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Providertype">
+<a id="../application/services/diagrams/serviceModels/infra.ts.Providertype" xlink:href="../application/services/diagrams/serviceModels/infra.ts"><text x="50.0" y="13.5" stroke="none" text-anchor="middle" data-name="Providertype">Providertype</text></a>
+
+</g>
+</g>
+<g transform="translate(360, 192.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Providertype">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Providertype">
+<text x="0.0" y="13.5" stroke="none" data-name="Providertype">LOCAL</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Providertype">CLOUD</text>
+
+</g>
+</g>
+</g>
+<g data-name="Provider">
+<g fill="lightgreen" stroke="#33322E" data-name="Provider">
+<rect x="516.0" y="146.5" height="107.0" width="82.0" data-name="Provider"></rect>
+<path d="M516.0 177.5 L598.0 177.5" fill="none" data-name="Provider"></path>
+</g>
+<g transform="translate(516, 146.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Provider">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Provider">
+<a id="../application/services/diagrams/serviceModels/infracomponent.ts.Provider" xlink:href="../application/services/diagrams/serviceModels/infracomponent.ts"><text x="33.0" y="13.5" stroke="none" text-anchor="middle" data-name="Provider">Provider</text></a>
+
+</g>
+</g>
+<g transform="translate(516, 177.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Provider">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Provider">
+<text x="0.0" y="13.5" stroke="none" data-name="Provider">AZURE</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Provider">GCP</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Provider">AWS</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Provider">IBM</text>
+
+</g>
+</g>
+</g>
+<g data-name="Iacframeworks">
+<g fill="lightgreen" stroke="#33322E" data-name="Iacframeworks">
+<rect x="638.0" y="161.5" height="77.0" width="131.0" data-name="Iacframeworks"></rect>
+<path d="M638.0 192.5 L769.0 192.5" fill="none" data-name="Iacframeworks"></path>
+</g>
+<g transform="translate(638, 161.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Iacframeworks">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Iacframeworks">
+<a id="../application/services/diagrams/serviceModels/infra.ts.Iacframeworks" xlink:href="../application/services/diagrams/serviceModels/infra.ts"><text x="57.5" y="13.5" stroke="none" text-anchor="middle" data-name="Iacframeworks">Iacframeworks</text></a>
+
+</g>
+</g>
+<g transform="translate(638, 192.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Iacframeworks">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Iacframeworks">
+<text x="0.0" y="13.5" stroke="none" data-name="Iacframeworks">TF</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Iacframeworks">GITACTIONS</text>
+
+</g>
+</g>
+</g>
+<g data-name="infracomponent">
+<g fill="lightblue" stroke="#33322E" data-name="infracomponent">
+<rect x="809.0" y="37.5" height="325.0" width="278.0" data-name="infracomponent"></rect>
+<path d="M809.0 68.5 L1087.0 68.5" fill="none" data-name="infracomponent"></path>
+<path d="M809.0 354.5 L1087.0 354.5" fill="none" data-name="infracomponent"></path>
+</g>
+<g transform="translate(809, 37.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="infracomponent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="infracomponent">
+<a id="../application/services/diagrams/serviceModels/infracomponent.ts.infracomponent" xlink:href="../application/services/diagrams/serviceModels/infracomponent.ts"><text x="131.0" y="13.5" stroke="none" text-anchor="middle" data-name="infracomponent">infracomponent</text></a>
+
+</g>
+</g>
+<g transform="translate(809, 68.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="infracomponent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="infracomponent">
+<text x="0.0" y="13.5" stroke="none" data-name="infracomponent">+created_date: { type: Date</text>
+<text x="0.0" y="28.5" stroke="none" data-name="infracomponent">}</text>
+<text x="0.0" y="43.5" stroke="none" data-name="infracomponent">+created_by: { type: String</text>
+<text x="0.0" y="58.5" stroke="none" data-name="infracomponent">}</text>
+<text x="0.0" y="73.5" stroke="none" data-name="infracomponent">+last_modified_by: { type: String</text>
+<text x="0.0" y="88.5" stroke="none" data-name="infracomponent">}</text>
+<text x="0.0" y="103.5" stroke="none" data-name="infracomponent">+last_modified_date: { type: Date</text>
+<text x="0.0" y="118.5" stroke="none" data-name="infracomponent">}</text>
+<text x="0.0" y="133.5" stroke="none" data-name="infracomponent">+provider: { type: Provider</text>
+<text x="0.0" y="148.5" stroke="none" data-name="infracomponent">}</text>
+<text x="0.0" y="163.5" stroke="none" data-name="infracomponent">+name: { type: String</text>
+<text x="0.0" y="178.5" stroke="none" data-name="infracomponent">}</text>
+<text x="0.0" y="193.5" stroke="none" data-name="infracomponent">+scriptid: { type: String</text>
+<text x="0.0" y="208.5" stroke="none" data-name="infracomponent">}</text>
+<text x="0.0" y="223.5" stroke="none" data-name="infracomponent">+scriptlocation: { type: String</text>
+<text x="0.0" y="238.5" stroke="none" data-name="infracomponent">}</text>
+<text x="0.0" y="253.5" stroke="none" data-name="infracomponent">+imagename: { type: String</text>
+<text x="0.0" y="268.5" stroke="none" data-name="infracomponent">}</text>
+
+</g>
+</g>
+<g transform="translate(809, 354.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="infracomponent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="infracomponent">
 
 </g>
 </g>

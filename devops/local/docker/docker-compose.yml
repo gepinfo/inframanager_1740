@@ -156,6 +156,7 @@ services:
       - securitymanager
       - systemcredentialmanager
       - systementry
+      - infra
 
     logging:
       driver: "fluentd"
@@ -225,6 +226,25 @@ services:
     container_name: systementry-1740
     ports: 
       - 8010:8010
+    env_file: .env
+    depends_on:
+      - mongo
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: 0.0.0.0:24224
+        fluentd-async-connect: "true"
+        tag: fluent
+    mem_limit: 300m
+    mem_reservation: 150m
+    cpus: 0.2
+
+  infra: 
+    build: ../../../application/services/custom_services/infra
+    image: infra-1740
+    container_name: infra-1740
+    ports: 
+      - 8011:8011
     env_file: .env
     depends_on:
       - mongo
